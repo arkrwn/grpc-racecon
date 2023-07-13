@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Counter {
+    rpc Increment (IncrementRequest) returns (IncrementResponse);
+    rpc GetValue (GetValueRequest) returns (GetValueResponse);
+}
+
+message IncrementRequest {}
+message IncrementResponse {}
+
+message GetValueRequest {}
+message GetValueResponse {
+    int32 value = 1;
+}
